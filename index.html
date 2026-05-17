@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para La Mujer Que Mas Amo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* RESET Y ESTILOS GLOBALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0b11;
+            color: #f4f4f6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .hidden {
+            display: none !important;
+            opacity: 0;
+        }
+
+        /* PAGINA 1: BIENVENIDA */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #231525 0%, #0d0b11 100%);
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 50px 40px;
+            border-radius: 24px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-content h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 24px;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            color: #b3b0b8;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        button {
+            background: linear-gradient(135deg, #e63956 0%, #ae203b 100%);
+            color: #ffffff;
+            border: none;
+            padding: 14px 38px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(230, 57, 86, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(230, 57, 86, 0.5);
+        }
+
+        /* SECCIÓN GLOBAL DE CONTENIDO */
+        .content-page {
+            min-height: 100vh;
+            width: 100%;
+            padding: 60px 20px;
+            background: radial-gradient(circle at center, #1b101d 0%, #0d0b11 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 50px;
+        }
+
+        /* NAV BUTTONS */
+        .nav-btn-container {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b3b0b8;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* PAGINA 2: RECUERDOS (FOTOS) */
+        .columns-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .memory-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-5px);
+            border: 1px solid rgba(255, 117, 140, 0.3);
+        }
+
+        .memory-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .card-text {
+            padding: 25px;
+        }
+
+        .card-text h3 {
+            color: #ff758c;
+            margin-bottom: 10px;
+        }
+
+        .card-text p {
+            color: #b3b0b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* PAGINA 3: BUZON DE CARTAS */
+        .letters-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .letter-trigger {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 25px 30px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .letter-trigger:hover {
+            transform: scale(1.02);
+            border-color: rgba(255, 117, 140, 0.3);
+            background: rgba(255, 117, 140, 0.02);
+        }
+
+        .letter-trigger span { color: #ff758c; }
+
+        /* MODAL DE CARTAS ERGÓNOMICO */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 3, 8, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s;
+        }
+
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+        .epic-letter-box {
+            background: #141118;
+            border: 1px solid rgba(255, 117, 140, 0.3);
+            padding: 40px;
+            border-radius: 24px;
+            max-width: 650px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .modal-overlay.active .epic-letter-box { transform: scale(1); }
+
+        .close-letter-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            color: #b3b0b8;
+            cursor: pointer;
+        }
+
+        .epic-letter-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff7eb3;
+            margin-bottom: 20px;
+        }
+
+        .epic-letter-body {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e2dfe7;
+            white-space: pre-line;
+        }
+
+        /* PAGINA 4: NUNCA OLVIDES QUIEN ERES */
+        .inspiration-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 850px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        .inspiration-card img { width: 100%; height: 100%; min-height: 250px; object-fit: cover; }
+        .inspiration-text { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+        .inspiration-text h3 { color: #ff758c; margin-bottom: 15px; }
+        .inspiration-text p { color: #e2dfe7; line-height: 1.8; }
+
+        /* PAGINA 5: PLAYLIST SPOTIFY */
+        .playlist-container {
+            width: 100%;
+            max-width: 750px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .track-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .track-card iframe {
+            border-radius: 12px;
+            border: none;
+            width: 100%;
+            height: 80px; /* Tamaño unificado compacto y elegante */
+        }
+
+        .track-dedication {
+            font-size: 0.95rem;
+            color: #b3b0b8;
+            font-style: italic;
+            border-left: 3px solid #ff758c;
+            padding-left: 15px;
+            line-height: 1.6;
+        }
+
+        /* PAGINA 6: LINEA DE TIEMPO */
+        .timeline {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, #ff758c, #231525);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '❤️';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -13px;
+            top: 25px;
+            z-index: 1;
+            font-size: 14px;
+        }
+
+        .left { left: 0; text-align: right; }
+        .right { left: 50%; text-align: left; }
+        .right::after { left: -10px; }
+
+        .timeline-content {
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+        }
+
+        .timeline-content h3 { color: #ff758c; margin-bottom: 5px; font-size: 1.4rem; }
+        .timeline-content h4 { color: #ff7eb3; font-size: 1rem; margin-bottom: 10px; font-weight: 400; }
+        .timeline-content p { color: #b3b0b8; font-size: 0.9rem; line-height: 1.6; }
+
+        /* PAGINA 7: PROMESAS */
+        .promises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 950px;
+        }
+
+        .promise-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .promise-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff758c;
+            box-shadow: 0 10px 30px rgba(230, 57, 86, 0.15);
+        }
+
+        .promise-icon { font-size: 2.5rem; margin-bottom: 15px; display: inline-block; }
+        .promise-card h3 { color: #ff758c; margin-bottom: 12px; font-size: 1.25rem; }
+        .promise-card p { color: #b3b0b8; font-size: 0.95rem; line-height: 1.7; }
+
+        /* PAGINA 8: 100 IDIOMAS */
+        .languages-mural {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .lang-tag {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #b3b0b8;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .lang-tag:hover {
+            background: rgba(255, 117, 140, 0.1);
+            border-color: #ff758c;
+            color: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 117, 140, 0.3);
+        }
+
+        /* PAGINA 9: ACORDION ABECEDARIO */
+        .alphabet-container {
+            width: 100%;
+            max-width: 750px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .letter-row {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .letter-header {
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            gap: 20px;
+            transition: background 0.3s;
+        }
+
+        .letter-header:hover { background: rgba(255, 117, 140, 0.02); }
+        .letter-char { font-size: 2rem; font-weight: 600; color: #ff758c; font-family: 'Dancing Script', cursive; width: 30px; }
+        .letter-word { font-size: 1.1rem; color: #f4f4f6; font-weight: 400; }
+        .letter-body { padding: 0 30px; max-height: 0; overflow: hidden; transition: all 0.3s ease-out; color: #b3b0b8; font-size: 0.95rem; line-height: 1.7; }
+        .letter-row.active .letter-body { padding: 5px 30px 25px 80px; max-height: 200px; }
+
+        /* PAGINA 10: TEXTO GIGANTE Y VIDEO */
+        .giant-letter-box {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 117, 140, 0.2);
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 850px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: #000;
+        }
+
+        .giant-letter-content {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #e2dfe7;
+            font-weight: 300;
+            white-space: pre-line;
+            text-align: justify;
+        }
+
+        /* PARTÍCULAS */
+        #particles-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+        .heart-particle { position: absolute; bottom: -50px; color: #ff4d6d; font-size: 24px; animation: floatUp 4s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes floatUp {
+            0% { transform: translateY(0) translateX(0) scale(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; transform: translateY(-10vh) translateX(0) scale(1.2); }
+            100% { transform: translateY(-115vh) translateX(var(--randomX)) scale(0.8) rotate(var(--randomRotate)); opacity: 0; }
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .columns-grid { grid-template-columns: 1fr; }
+            .inspiration-card { grid-template-columns: 1fr; }
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item::after { left: 22px; top: 25px; }
+            .left { text-align: left; }
+            .right { left: 0; }
+            .giant-letter-box { padding: 25px; gap: 30px; }
+            .main-title { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero" id="page1">
+        <div class="hero-content">
+            <h1>Para La mujer que merece lo mejor de este mundo</h1>
+            <p>Esto no lo hago con el fin de recibir algo a cambio, solo lo hago porque no se de que manera mas demostrarte el amor que te tengo.</p>
+            <button id="heartBtn">Da Click aqui ❤️</button>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page2">
+        <div class="container">
+            <h2 class="main-title">La razón por la cual hago esto</h2>
+            <div class="columns-grid">
+                <div class="column">
+                    <div class="memory-card">
+                        <img src="https://i.postimg.cc/L861w3RY/cine.jpg" alt="Cine">
+                        <div class="card-text"><h3>02/05/26</h3><p>Por que yo se lo que siento por ti y este sentimiento no soy capaz de hacerlo desaparecer nunca.</p></div>
+                    </div>
+                    <div class="memory-card">
+                        <img src="https://i.postimg.cc/L4LL1sNL/comida.jpg" alt="Comida">
+                        <div class="card-text"><h3>25/04/26</h3><p>Comer algo delicioso contigo no tiene precio</p></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="memory-card">
+                        <img src="https://i.postimg.cc/5N8gb3hW/bebe.jpg" alt="Bebe">
+                        <div class="card-text"><h3>25/04/26</h3><p>Gracias por crear en mi las ganas de ser papa en algun momento</p></div>
+                    </div>
+                    <div class="memory-card">
+                        <img src="https://i.postimg.cc/25LVNHtk/marzo.jpg" alt="Marzo">
+                        <div class="card-text"><h3>14/03/2026</h3><p>Cada vez que te volvia a ver sentia como mi vida se recargaba de energia</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-btn-container"><button onclick="navigate('page2', 'page3')">Quiero leerte algo más... ✨</button></div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page3">
+        <div class="container">
+            <h2 class="main-title">Cartas para ti</h2>
+            <div class="letters-grid">
+                <div class="letter-trigger" data-target="carta1"><h4>💌 Para cuando me extrañes...</h4><span>➔</span></div>
+                <div class="letter-trigger" data-target="carta2"><h4>💭 Para cuando dudes de lo que significas para mí...</h4><span>➔</span></div>
+                <div class="letter-trigger" data-target="carta3"><h4>✨ Para cuando quieras recordar nuestro inicio...</h4><span>➔</span></div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page3', 'page2')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page3', 'page4')">Siguiente... 💖</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page4">
+        <div class="container">
+            <h2 class="main-title">Nunca olvides quién eres</h2>
+            <div class="inspiration-card">
+                <img src="https://i.postimg.cc/ydMLVrnm/bb.jpg" alt="Foto">
+                <div class="inspiration-text"><h3>La persona tan maravillosa que eres</h3><p>Quiero aprovechar este espacio para recordarte lo increíble que eres maria. Eres una persona unica por dentro y por fuera que siempre trata de solucionar hasta lo que no has roto y amas de una forma que cualquier persona le gustaria ser amado.</p></div>
+            </div>
+            <div class="inspiration-card">
+                <img src="https://i.postimg.cc/4dDWJFwb/bb2.jpg" alt="Foto">
+                <div class="inspiration-text"><h3>Tu personalidad unica y empatica</h3><p>Eres una excelente persona y siempre te lo recordare, eres una persona que siempre que puede ayudar lo haces, amas a las personas que te aman a ti sin esperar nada a cambio y eso es algo que te hace demasiado increible.</p></div>
+            </div>
+            <div class="inspiration-card">
+                <img src="https://i.postimg.cc/NM3dgPb8/b3.jpg" alt="Foto">
+                <div class="inspiration-text"><h3>Tienes que seguir adelante</h3><p>Sé que a veces las cosas o las circunstancias se pueden poner difíciles para ti, no dejes que nada te frene y siempre recuerda que puedes con absolutamente todo pq eres una mujer demasiado fuerte y yo siempre estare aqui para ayudarte en todo de lejos o estando en tu vida.</p></div>
+            </div>
+            <div class="inspiration-card">
+                <img src="https://i.postimg.cc/k40Tnhwb/b4.jpg" alt="Foto">
+                <div class="inspiration-text"><h3>Cosas gigantes te esperan</h3><p>Quiero que te grabes esto muy bien en la mente. para ti vienen cosas grandísimas en la vida. Tienes todo el potencial para lograr lo que te propongas y yo sé que el futuro te tiene preparadas las bendiciones y los éxitos más grandes por que como siempre te lo he dicho, si tienes un plan de vida y yo lo veo en ti, vas a ser una persona exitosa e increible.</p></div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page4', 'page3')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page4', 'page5')">Nuestra música... 🎵</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page5">
+        <div class="container">
+            <h2 class="main-title">Nuestras canciones</h2>
+            <div class="playlist-container">
+                <div class="track-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1PDP7mLiAMwhfmgIwzhOm2?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <div class="track-dedication">Esta canción siempre me hace recordar tu sonrisa y los momentos exactos en los que desearía detener el tiempo a tu lado.</div>
+                </div>
+                <div class="track-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2VhJ4nrPorAbySEgO4V0BS?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <div class="track-dedication">Escuchar la letra de este tema me hace pensar en lo afortunado que soy de tener una persona tan transparente como tú en mi vida.</div>
+                </div>
+                <div class="track-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4vgU9MGJwhgBEtlO8mMN49?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <div class="track-dedication">Nuestra melodía perfecta para cuando la distancia se siente un poquito pesada; me da la paz exacta que necesito.</div>
+                </div>
+                <div class="track-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5y2ijHECwFYWqcAHKTZgzD?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <div class="track-dedication">Por el ritmo, por la letra, por cómo encaja con todo lo que vivimos. Es enteramente tuya.</div>
+                </div>
+                <div class="track-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0bzd1GwpRojk4t2ryEEaes?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <div class="track-dedication">El cierre perfecto de nuestra playlist. Te la dedico hoy, mañana y siempre.</div>
+                </div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page5', 'page4')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page5', 'page6')">Nuestra historia... ⏳</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page6">
+        <div class="container">
+            <h2 class="main-title">Momentos Inolvidables</h2>
+            <div class="timeline">
+                <div class="timeline-item left"><div class="timeline-content"><h3>10 de Febrero 2025</h3><h4>El primer vistazo</h4><p>El día exacto en que te vi por primera vez. Una fecha grabada en mi mente porque cambió todo mi año entero.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content"><h3>Fecha Especial 2</h3><h4>El primer mensaje</h4><p>Cuando por fin nos dimos cuenta de que el interest y las ganas de conocernos eran completamente mutuos.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content"><h3>Fecha Especial 3</h3><h4>Nuestras pláticas eternas</h4><p>Esos días donde el reloj no importaba y nos dábamos cuenta de lo rápido que se pasaba el tiempo hablando contigo.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content"><h3>Fecha Especial 4</h3><h4>Nuestra primera salida</h4><p>Los nervios a mil y la felicidad de tenerte cerca por fin, compartiendo un momento real.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content"><h3>Fecha Especial 5</h3><h4>Un acuerdo mutuo</h4><p>Cuando decidimos cuidar lo nuestro por encima de lo que cualquier otra persona pudiera inventar o decir.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content"><h3>14 de Marzo 2026</h3><h4>Recarga de energía</h4><p>Verte de nuevo y sentir cómo toda mi vida se llenaba de luz y de fuerzas otra vez de inmediato.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content"><h3>25 de Abril 2026</h3><h4>Un día perfecto juntos</h4><p>Disfrutar de esa comida deliciosa y ver lo hermosa que eres en cada pequeño detalle de la tarde.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content"><h3>25 de Abril 2026</h3><h4>Una gran ilusión</h4><p>El instante exacto en el que despertaste en mí esas ganas tan puras de formar una familia contigo en el futuro.</p></div></div>
+                <div class="timeline-item left"><div class="timeline-content"><h3>02 de Mayo 2026</h3><h4>Tarde de cine</h4><p>Donde reafirmé que lo que siento por ti no tiene marcha atrás y jamás voy a dejar que desaparezca.</p></div></div>
+                <div class="timeline-item right"><div class="timeline-content"><h3>Hoy</h3><h4>Aquí sigo para ti</h4><p>Cada segundo recorrido ha valido la pena, y esta página es la muestra de que mi corazón sigue estando en el mismo lugar.</p></div></div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page6', 'page5')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page6', 'page7')">Mis promesas... 🎯</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page7">
+        <div class="container">
+            <h2 class="main-title">Mis Promesas para Ti</h2>
+            <div class="promises-grid">
+                <div class="promise-card"><span class="promise-icon">🤝</span><h3>Estar en cada momento</h3><p>Te prometo estar presente en tus días más brillantes y, sobre todo, en los más oscuros. Cada vez que me necesites, solo mira a tu lado.</p></div>
+                <div class="promise-card"><span class="promise-icon">🛡️</span><h3>Ser tu lugar seguro</h3><p>Te prometo un espacio libre de juicios donde puedas ser tú misma al 100%, llorar si es necesario y reír con total libertad.</p></div>
+                <div class="promise-card"><span class="promise-icon">🌱</span><h3>Apoyar cada sueño</h3><p>Te prometo ser el primero en aplaudir tus metas y ayudarte a levantarte si llegas a tropezar. Sé lo grande que vas a ser.</p></div>
+                <div class="promise-card"><span class="promise-icon">💫</span><h3>Recordarte tu valor</h3><p>Te prometo que en los días en que dudes de ti misma, yo estaré ahí para recordarte lo maravillosa, inteligente y fuerte que eres.</p></div>
+                <div class="promise-card"><span class="promise-icon">♾️</span><h3>Cuidar lo que siento</h3><p>Te prometo mantener este sentimiento intacto a pesar de las distancias o las circunstancias. Mi respeto y amor por ti son permanentes.</p></div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page7', 'page6')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page7', 'page8')">El mundo entero... 🌍</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page8">
+        <div class="container">
+            <h2 class="main-title">Un Sentimiento Sin Fronteras</h2>
+            <div class="languages-mural" id="mural"></div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page8', 'page7')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page8', 'page9')">Por qué tú... 🌹</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page9">
+        <div class="container">
+            <h2 class="main-title">Por qué siempre serás tú</h2>
+            <div class="alphabet-container">
+                <div class="letter-row">
+                    <div class="letter-header" onclick="toggleAccordion(this)"><span class="letter-char">M</span><span class="letter-word">Maravillosa esencia</span></div>
+                    <div class="letter-body">Porque tu forma de ser y tratar a los que te rodean te hace única en este mundo. Tu nobleza me inspira cada día.</div>
+                </div>
+                <div class="letter-row">
+                    <div class="letter-header" onclick="toggleAccordion(this)"><span class="letter-char">A</span><span class="letter-word">Amor incondicional</span></div>
+                    <div class="letter-body">Por la manera tan limpia y transparente en la que entregas tu corazón, cuidando cada detalle sin esperar nada a cambio.</div>
+                </div>
+                <div class="letter-row">
+                    <div class="letter-header" onclick="toggleAccordion(this)"><span class="letter-char">R</span><span class="letter-word">Risas compartidas</span></div>
+                    <div class="letter-body">Porque hasta en los días grises, recordar tu sonrisa o escuchar tu voz tiene el poder absoluto de cambiar mi día por completo.</div>
+                </div>
+                <div class="letter-row">
+                    <div class="letter-header" onclick="toggleAccordion(this)"><span class="letter-char">I</span><span class="letter-word">Inspiración constante</span></div>
+                    <div class="letter-body">Me motivas a ser una mejor versión de mí mismo, a trabajar por un futuro brillante y a no rendirme ante nada.</div>
+                </div>
+                <div class="letter-row">
+                    <div class="letter-header" onclick="toggleAccordion(this)"><span class="letter-char">A</span><span class="letter-word">Apoyo absoluto</span></div>
+                    <div class="letter-body">Porque sé que cuento contigo, con tu empatía y tu abrazo sincero, sin importar la distancia o los kilómetros que nos separen.</div>
+                </div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page9', 'page8')" class="btn-secondary">◁ Volver</button>
+                <button onclick="navigate('page9', 'page10')">Una última cosa... 📝</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page hidden" id="page10">
+        <div class="container">
+            <h2 class="main-title">Para Toda La Vida</h2>
+            <div class="giant-letter-box">
+                <div class="video-wrapper">
+                    <div class="video-wrapper">
+                    <iframe id="streamableVideo" src="https://streamable.com/e/5hza13?autoplay=1&nocontrols=0" width="100%" height="100%" frameborder="0" allowfullscreen style="width:100%; height:360px; border-radius:16px;"></iframe>
+  <div class="video-wrapper">
+                    <iframe id="streamableVideo" src="https://streamable.com/e/5hza13?autoplay=1&nocontrols=0" width="100%" height="100%" frameborder="0" allowfullscreen style="width:100%; height:360px; border-radius:16px;"></iframe>
+                </div>
+                <div class="giant-letter-content">
+                    Maria, quiero que guardes esta página como un recordatorio eterno del lugar que ocupas en mi vida. 
+                    
+                    No importa el tiempo, la distancia o los giros que dé el mundo; mis intenciones contigo siempre han sido y serán las más puras. Te amo por lo que eres, por cómo me haces sentir y por la increíble luz que llevas dentro de ti. Gracias por cruzarte en mi camino y por dejarme quererte. Aquí estaré siempre, pase lo que pase.
+                </div>
+            </div>
+            <div class="nav-btn-container">
+                <button onclick="navigate('page10', 'page9')" class="btn-secondary">◁ Volver</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="particles-container"></div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="epic-letter-box">
+            <span class="close-letter-btn" id="closeLetter">&times;</span>
+            <h3 class="epic-letter-title" id="modalTitle"></h3>
+            <div class="epic-letter-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // TEXTOS DE LAS CARTAS (PÁGINA 3)
+        const cartas = {
+            carta1: {
+                title: "Para cuando me extrañes...",
+                body: "Recuerda que aqui sigo estando para ti cada que me necesites, quiero recordarte que te amo con todas las fuerzas de mi corazon, que recuerdes que ame cada vez que me abrazabas, que me besaste, que me mimaste, que me miraste, y que me diste apoyo. Nunca olvides que soy el hombre que te ama apesar de todas las circunstancias y que nunca en la vida voy a dejar de amarte, ya no eres mi novia pero sigues siendo mi vida entera y seguiria dando cada parte de mi corazon si es por ti. Te amo con el alma Maria Jose Quiroga y nunca olvides de que hay un hombre que te amara y se siente orgulloso de ti todos los dias de su vida.."
+            },
+            carta2: {
+                title: "Para cuando dudes de tu valor...",
+                body: "Para mi eres simbolo de paz, de constancia, perseverancia, y de sobre todo amor, en mi vida fuiste y eres una persona muy importante porque me hiciste amar a los animalitos, me hiciste volverme mejor persona cada dia que pasabamos juntos, me ayudaste a tener paciencia, a calmarme en todas las circunstancias y dejar de ser una persona un poco arrogante, significas y significaste todo para mi porque nunca senti algo tan puro por alguien."
+            },
+            carta3: {
+                title: "Para cuando quieras recordar nuestro inicio...",
+                body: "Recuerdo el dia que te vi por primera vez, un 10 de febrero del 2025. Estuve viendote por el resto del año hasta que me di cuenta que mi momento habia llegado y empece a seguirte y tu me notaste y el gusto supimos que fue mutuo, hubieron circunstancias al conocernos porque no queriamos q la gente creara cosas pero los unicos q sabiamos lo que sentiamos por el otro eramos nosotros. El inicio contigo fue hermoso porque me diste dar a entender que el tiempo no importa para nada y que una persona te puede demostrar en 1 mes todo lo que nadie te ha demostrado en 1 año, disfrute muchisimo nuestro inicio porque cada dia disfrutaba conocerte mas y mas. Gracias por aparecer en mi vida chinita."
+            }
+        };
+
+        // FRASES DEL MURAL EN 100 IDIOMAS (PÁGINA 8)
+        const languages = [
+            "Te amo (Español)", "I love you (Inglés)", "Je t'aime (Francés)", "Ti amo (Italiano)", "Eu te amo (Portugués)",
+            "Ich liebe dich (Alemán)", "Ik hou van je (Neerlandés)", "Jeg elsker deg (Noruego)", "Jag älskar dig (Sueco)", "Jeg elsker dig (Danés)",
+            "Te bhea (Romaní)", "Volim te (Croata)", "Milujem ťa (Eslovaco)", "Miluji tě (Checo)", "Kocham cię (Polaco)",
+            "Szeretlek (Húngaro)", "Te iubesc (Rumano)", "Obicham te (Búlgaro)", "Volim te (Serbio)", "Te dua (Albanés)",
+            "Se agapo (Griego)", "Seni seviyorum (Turco)", "Ani ohev otach (Hebreo)", "Ana behibak (Árabe)", "Doostat daram (Persa)",
+            "Bi chamd khairtai (Mongol)", "Main tumse pyar karta hoon (Hindi)", "Ame tumake bhalobashi (Bengalí)", "Meinu twadde naal pyaar hai (Punjabi)", "Nenu ninnu premistunnanu (Telugu)",
+            "Naan unnai kadhalikiren (Tamil)", "Njan ninne premikunnu (Malayalam)", "Ch'an tahi (Coreano)", "Wo ai ni (Chino)", "Watashi wa anata o aishite imasu (Japonés)",
+            "Anh yêu em (Vietnamita)", "Chan rak khun (Tailandés)", "Saya cintakan mu (Malayo)", "Mahal kita (Tagalo)", "Aku cinta kamu (Indonesio)",
+            "Ina son ki (Hausa)", "Mo nifẹ rẹ (Yoruba)", "Ag benty (Amhárico)", "Ndinokuda (Shona)", "Ngiyakuthanda (Zulu)",
+            "Ke a go rata (Tswana)", "Nakhuyitanhanda (Xhosa)", "Mena tando (Umbundu)", "Nalingi yo (Lingala)", "Ndimakukondani (Chichewa)",
+            "Tha gaol agam ort (Gaélico)", "Rwy'n dy garu di (Galés)", "Is breá liom tú (Irlandés)", "Taim i ngra leat (Gaélico Irlandés)", "M'bfeam tu (Bretón)",
+            "Maite zaitut (Euskera)", "T'estimo (Catalán)", "Quéroche (Gallego)", "Ti tengu caru (Corso)", "Ila t'ame (Piamontés)",
+            "Te amo (Latín)", "Esperanto (Mi amas vin)", "Volim te (Bosnio)", "Sakartvelo (Me shen miqvarqar)", "Es tevi mīlu (Letón)",
+            "Aš tave myliu (Lituano)", "Ma armastan sind (Estonio)", "Minä rakastan sinua (Finés)", "Ég elska þig (Islandés)", "Kitaj tave (Bielorruso)",
+            "Ya tebya lyublyu (Ruso)", "Ya tebe kokhayu (Ucraniano)", "Men seni sevaman (Uzbeko)", "Men seni süyemin (Kazajo)", "Mën seni süyöm (Kirguís)",
+            "Me tave bazo (Kurdo)", "Ez te hez dikim (Kurmanji)", "Khavat khvore (Armenio)", "Ma t'aimo (Occitano)", "Eg elskar deg (Nynorsk)",
+            "Munu puyay (Quechua)", "Aymara (Munasmawa)", "Guaraní (Rohayhu)", "Niaiza (Mapudungun)", "Tlahtoa (Náhuatl)",
+            "Tsi tsi (Navajo)", "Cherokee (Gvgeyu)", "Swahili (Nakupenda)", "Maa (Anyaany)", "Somalí (Wa rrabba)",
+            "Oromoo (Sin jaalladha)", "Malgache (Tiako ianao)", "Maori (Alofa au ia te oe)", "Samoano (Ou te alofa ia te oe)", "Fiyiano (Au domoni iko)"
+        ];
+
+        // INICIALIZACIÓN DE COMPONENTES
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cargar mural de idiomas
+            const mural = document.getElementById('mural');
+            languages.forEach(lang => {
+                const tag = document.createElement('span');
+                tag.className = 'lang-tag';
+                tag.innerText = lang;
+                mural.appendChild(tag);
+            });
+
+            // Lógica de Modales de Cartas
+            const modal = document.getElementById('modalOverlay');
+            const closeBtn = document.getElementById('closeLetter');
+
+            document.querySelectorAll('.letter-trigger').forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const target = trigger.getAttribute('data-target');
+                    if (cartas[target]) {
+                        document.getElementById('modalTitle').innerText = cartas[target].title;
+                        document.getElementById('modalBody').innerText = cartas[target].body;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('active'); });
+
+            // Botón de Inicio con Efecto de Partículas Estallando
+            document.getElementById('heartBtn').addEventListener('click', () => {
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(createHeart, i * 60);
+                }
+                setTimeout(() => navigate('page1', 'page2'), 500);
+            });
+
+            // Generador automático continuo de partículas de fondo
+            setInterval(createHeart, 400);
+        });
+
+        // NAVEGACIÓN DE PÁGINAS Y TRUCO DE REINICIO DE VIDEO
+        function navigate(fromId, toId) {
+            document.getElementById(fromId).classList.add('hidden');
+            const nextPage = document.getElementById(toId);
+            nextPage.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Reiniciar dinámicamente el video de Streamable si entra a la Página 10
+            if (toId === 'page10') {
+                const videoElement = document.getElementById('finalVideo');
+                if (videoElement) {
+                    videoElement.src = "https://streamable.com/e/6eupw7?autoplay=1&nocontrols=1";
+                }
+            }
+        }
+
+        // CONTROL DEL ACORDEÓN (PÁGINA 9)
+        function toggleAccordion(header) {
+            const row = header.parentElement;
+            const isActive = row.classList.contains('active');
+            
+            document.querySelectorAll('.letter-row').forEach(r => r.classList.remove('active'));
+            if (!isActive) {
+                row.classList.add('active');
+            }
+        }
+
+        // SISTEMA DE PARTÍCULAS FLOTANTES (CORAZONES)
+        function createHeart() {
+            const container = document.getElementById('particles-container');
+            if (!container) return;
+
+            const heart = document.createElement('div');
+            heart.className = 'heart-particle';
+            heart.innerText = ['❤️','💖','✨','🌸','💫'][Math.floor(Math.random() * 5)];
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+            
+            const randomX = (Math.random() * 200 - 100) + 'px';
+            const randomRotate = (Math.random() * 360) + 'deg';
+            heart.style.setProperty('--randomX', randomX);
+            heart.style.setProperty('--randomRotate', randomRotate);
+            
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+
+            container.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
